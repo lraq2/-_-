@@ -164,23 +164,31 @@
         .borrow-button:hover {
             background-color: #006f6f;
         }
+/* تنسيق العنوان الرئيسي */
+h1 {
+    font-size: 1.5em; /* تعديل حجم الخط */
+    color: #42464d;
+    margin: 5px 0; /* تقليل المسافات */
+    line-height: 1.2; /* تحسين ارتفاع السطر */
+}
 
-        /* وسائط CSS للأجهزة الصغيرة */
-        @media (max-width: 600px) {
-            .custom-button, .search-button {
-                font-size: 14px;
-                padding: 10px;
-            }
-            .book-item {
-                width: 140px;
-            }
-            ul {
-                flex-direction: column;
-            }
-            li {
-                padding: 10px;
-            }
-        }
+/* إعدادات خاصة بالشاشات الصغيرة */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em; /* حجم أصغر للشاشات الصغيرة */
+        margin: 10px 0; /* تعديل المسافة حول العنوان */
+    }
+    .section img {
+        width: 80px;
+        height: 80px;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li {
+        padding: 8px;
+    }
+}
     </style>
 </head>
 <body>
