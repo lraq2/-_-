@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابن البصرة | طلاب العراق | السادس الإعدادي</title>
+    <style>
+        /* إعدادات الخطوط والألوان */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* تنسيق القائمة الرئيسية */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            flex-wrap: wrap; /* يجعل القائمة تتكيف مع الشاشة */
+        }
+        li {
+            padding: 10px 15px; /* تعديل حجم التباعد */
+        }
+        li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px; /* حجم أصغر ليتناسب مع الأجهزة الصغيرة */
+            font-weight: 600;
+        }
+        li a:hover {
+            background-color: #007b7f;
+            border-radius: 10px;
+        }
+
+        /* تنسيق العناوين */
+        h1 {
+            font-size: 1em; /* حجم أصغر للعناوين */
+            color: #42464d;
+            margin: 10px 0;
+        }
+
+        /* تنسيق الصور */
+        .section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .section img:hover {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق قسم المعلومات */
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 90%; /* جعلها مناسبة لشاشة أصغر */
+        }
+
+        /* تنسيق الأزرار */
+        .custom-button {
+            display: block;
+            width: 90%; /* عرض مناسب للأجهزة الصغيرة */
+            max-width: 500px;
+            margin: 8px auto;
+            padding: 12px;
+            background: linear-gradient(45deg, #8b7272, #44160a);
+            color: white;
+            font-size: 16px; /* حجم نص أصغر */
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff4e4e, #ff8b73);
+        }
+
+        /* زر البحث الثابت */
+        .search-button {
+            position: fixed;
+            bottom: 20px; /* المسافة من أسفل الصفحة */
+            right: 20px;  /* المسافة من الجهة اليمنى */
+            padding: 12px 20px;
+            background-color: #007b7f;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* تأكد من أن الزر يظهر فوق المحتويات الأخرى */
+        }
+
+        .search-button:hover {
+            background-color: #005f5b;
+        }
+
+        /* تنسيق قسم الكتب */
+        .books-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        .book-item {
+            width: 150px; /* حجم أصغر */
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .book-item:hover {transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-item img {
+            max-height: 120px; /* ارتفاع أصغر للصور */
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .borrow-button {
+            margin-top: 8px;
+            padding: 8px 15px;
+            background-color: #007b7f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .borrow-button:hover {
+            background-color: #006f6f;
+        }
+
+        /* وسائط CSS للأجهزة الصغيرة */
+        @media (max-width: 600px) {
+            .custom-button, .search-button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .book-item {
+                width: 140px;
+            }
+            ul {
+                flex-direction: column;
+            }
+            li {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- القائمة الرئيسية -->
+<ul>
+<li><a href="#d1">الرئيسية</a></li>
+<li><a href="https://t.me/d_tt123bot?start=625d6e65e3e8c61c285421641ece03c0">البحث في البوت</a></li>
+<li><a href="https://t.me/d_tt111">كروب طلاب السادس الإعدادي</a></li>
+<li><a href="https://t.me/hasan99bot?start=5f00115e5b9ff7df9be670619bfada5b">شلون تجيب 100</a></li>
+</ul>
+
+<!-- العنوان الرئيسي وقسم الصور -->
+<div class="section" id="d1">
+<h1>ابن البصرة | طلاب العراق</h1>
+<p>كل ما يحتاجه الطالب من ملازم، توجيهات، ونصائح دراسية</p>
+<div>
+<a href="https://t.me/d_tt3" target="_blank">
+    <img src="img/1.jpg" alt="ابن البصرة | طلاب العراق">
+</a>
+<a href="https://t.me/d_tt111" target="_blank">
+    <img src="img/2.jpg" alt="ابن البصرة | طلاب العراق">
+</a>
+<a href="https://t.me/hasan99bot" target="_blank">
+    <img src="img/3.jpg" alt="ابن البصرة | طلاب العراق">
+</a>
+</div>
+
+<!-- الأزرار الإضافية -->
+<a href="https://t.me/d_tt123bot?start=4e9a1ee436415e035dda990a0b039963" class="custom-button" target="_blank">ملازم اللغة العربية السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=eed6022419bf38db21fc4cc4ffe6cba2" class="custom-button" target="_blank">ملازم الإسلامية السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=c9713621d06f81fcf5552c5cbb4413a7" class="custom-button" target="_blank">ملازم الكيمياء السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=85c9b9d9bf6689cfbcc8d5e95b061544" class="custom-button" target="_blank">ملازم الانكليزي السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=8de19dc94385b06a8a6a7b79fe22abfd" class="custom-button" target="_blank">ملازم الرياضيات السادس إعدادي 2025</a>
+<a href="https://t.me/d_tt123bot?start=625d6e65e3e8c61c285421641ece03c0" class="custom-button" target="_blank">ملازم الأحياء السادس إعدادي 2025</a>
+</div>
+
+<!-- قسم الكتب -->
+<h2>ملازم السادس الإعدادي 2025</h2>
+<div class="books-container">
+    <!-- كتاب 1 -->
+    <div class="book-item">
+        <img src="img/4.jpg" alt="حيدر وليد - رياضيات">
+        <h3>حيدر وليد  </h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/9'">تحميل </button>
+    </div>
+    <!-- كتاب 2 -->
+    <div class="book-item">
+        <img src="img/5.jpg" alt="علاء السعداوي - كيمياء">
+        <h3>علاء السعداوي  </h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/28'">تحميل </button>
+    </div>
+    <!-- كتاب 3 -->
+    <div class="book-item">
+        <img src="img/6.jpg" alt="مؤيد سليم - فيزياء">
+        <h3>مؤيد سليم </h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/23'">تحميل </button>
+    </div>
+ <!-- كتاب 4 -->
+ <div class="book-item">
+    <img src="img/8.jpg" alt=" نورس الموسوي ">
+    <h3> نورس الموسوي  </h3>
+    <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/22'">تحميل </button>
+</div>
+<!-- كتاب 5 -->
+<div class="book-item">
+    <img src="img/9.jpg" alt=" عقيل الزبيدي ">
+    <h3> عقيل الزبيدي </h3>
+    <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/18'">تحميل </button>
+</div>
+<!-- كتاب 6 -->
+<div class="book-item">
+    <img src="img/10.jpg" alt="عمار فاضل">
+    <h3> عمار فاضل</h3>
+    <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/12'">تحميل </button>
+</div>
+   
+</div>
+
+<!-- زر البحث الثابت -->
+<a href="https://t.me/d_tt123bot?start=search" class="search-button" target="_blank">البحث داخل البوت</a>
+
+</body>
+</html>
