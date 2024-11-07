@@ -128,26 +128,64 @@
             background: linear-gradient(45deg, #ff4e4e, #ff8b73);
         }
 
-        /* زر البحث الثابت */
-        .search-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 12px 20px;
-            background-color: #007b7f;
+        content="width=device-width, initial-scale=1.0">
+    <title>قائمة رئيسية مع زر البحث</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar a {
             color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
             text-decoration: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
+            font-size: 18px;
+        }
+        .search-container {
+            position: relative;
+        }
+        .search-input {
+            padding: 8px 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .search-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #007bff;
+            border: none;
+            padding: 8px 15px;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
         }
 
-        .search-button:hover {
-            background-color: #005f5b;
-        }
+
 
         /* تنسيق قسم الكتب */
         .books-container {
@@ -221,11 +259,18 @@
 </head>
 
 <body>
-    <!-- زر البحث باستخدام الذكاء الاصطناعي في الأعلى -->
-    <div class="ai-search-container">
-        <input type="text" id="ai-search-input" placeholder="ابحث هنا...">
-        <button onclick="performAISearch()">بحث</button>
-    </div>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="#d1">الرئيسية</a></li>
+
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="ابحث هنا...">
+                <button class="search-button">بحث</button>
+            </div>
+        </div>
+    </body>
 
     <!-- العنوان الرئيسي وقسم الصور -->
     <div class="section" id="d1">
@@ -295,9 +340,7 @@
    
 </div>
 
-<!-- زر البحث الثابت -->
-<a href="https://t.me/d_tt123bot?start=search" class="search-button" target="_blank">البحث داخل البوت</a>
-<body>
+
 
     <!-- القائمة الرئيسية -->
     <ul>
@@ -308,9 +351,6 @@
     </ul>
 </body>
 </html>
-
-    <!-- قسم البحث الثابت -->
-    <a href="#" class="search-button">ابحث الآن</a>
 
     <script>
         function performAISearch() {
