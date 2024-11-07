@@ -14,6 +14,41 @@
             text-align: center;
         }
 
+        /* تنسيق الزر الرئيسي للبحث بالذكاء الاصطناعي */
+        .ai-search-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .ai-search-container input {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .ai-search-container button {
+            padding: 10px 15px;
+            background-color: #007b7f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .ai-search-container button:hover {
+            background-color: #005f5b;
+        }
+
         /* تنسيق القائمة الرئيسية */
         ul {
             list-style-type: none;
@@ -23,15 +58,15 @@
             display: flex;
             justify-content: center;
             border-radius: 10px;
-            flex-wrap: wrap; /* يجعل القائمة تتكيف مع الشاشة */
+            flex-wrap: wrap;
         }
         li {
-            padding: 5px 7px; /* تعديل حجم التباعد */
+            padding: 5px 7px;
         }
         li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px; /* حجم أصغر ليتناسب مع الأجهزة الصغيرة */
+            font-size: 16px;
             font-weight: 600;
         }
         li a:hover {
@@ -41,7 +76,7 @@
 
         /* تنسيق العناوين */
         h1 {
-            font-size: 1em; /* حجم أصغر للعناوين */
+            font-size: 1em; 
             color: #42464d;
             margin: 10px 0;
         }
@@ -66,19 +101,19 @@
             background-color: #ffffff;
             border-radius: 15px;
             text-align: center;
-            max-width: 90%; /* جعلها مناسبة لشاشة أصغر */
+            max-width: 90%;
         }
 
         /* تنسيق الأزرار */
         .custom-button {
             display: block;
-            width: 90%; /* عرض مناسب للأجهزة الصغيرة */
+            width: 90%;
             max-width: 500px;
             margin: 8px auto;
             padding: 12px;
             background: linear-gradient(45deg, #8b7272, #44160a);
             color: white;
-            font-size: 16px; /* حجم نص أصغر */
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
             text-decoration: none;
@@ -96,8 +131,8 @@
         /* زر البحث الثابت */
         .search-button {
             position: fixed;
-            bottom: 20px; /* المسافة من أسفل الصفحة */
-            right: 20px;  /* المسافة من الجهة اليمنى */
+            bottom: 20px;
+            right: 20px;
             padding: 12px 20px;
             background-color: #007b7f;
             color: white;
@@ -107,7 +142,7 @@
             text-decoration: none;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* تأكد من أن الزر يظهر فوق المحتويات الأخرى */
+            z-index: 1000;
         }
 
         .search-button:hover {
@@ -125,7 +160,7 @@
         }
 
         .book-item {
-            width: 150px; /* حجم أصغر */
+            width: 150px;
             background-color: #ffffff;
             border-radius: 15px;
             padding: 15px;
@@ -134,12 +169,13 @@
             text-align: center;
         }
 
-        .book-item:hover {transform: scale(1.05);
+        .book-item:hover {
+            transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .book-item img {
-            max-height: 120px; /* ارتفاع أصغر للصور */
+            max-height: 120px;
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s;
@@ -184,33 +220,39 @@
     </style>
 </head>
 
+<body>
+    <!-- زر البحث باستخدام الذكاء الاصطناعي في الأعلى -->
+    <div class="ai-search-container">
+        <input type="text" id="ai-search-input" placeholder="ابحث هنا...">
+        <button onclick="performAISearch()">بحث</button>
+    </div>
 
-<!-- العنوان الرئيسي وقسم الصور -->
-<div class="section" id="d1">
-<h1>ابن البصرة | طلاب العراق</h1>
-<p>كل ما يحتاجه الطالب من ملازم، توجيهات، ونصائح دراسية</p>
-<div>
-<a href="https://t.me/d_tt3" target="_blank">
-    <img src="img/1.jpg" alt="ابن البصرة | طلاب العراق">
-</a>
-<a href="https://t.me/d_tt111" target="_blank">
-    <img src="img/2.jpg" alt="ابن البصرة | طلاب العراق">
-</a>
-<a href="https://t.me/hasan99bot" target="_blank">
-    <img src="img/3.jpg" alt="ابن البصرة | طلاب العراق">
-</a>
-</div>
+    <!-- العنوان الرئيسي وقسم الصور -->
+    <div class="section" id="d1">
+        <h1>ابن البصرة | طلاب العراق</h1>
+        <p>كل ما يحتاجه الطالب من ملازم، توجيهات، ونصائح دراسية</p>
+        <div>
+            <a href="https://t.me/d_tt3" target="_blank">
+                <img src="img/1.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+            <a href="https://t.me/d_tt111" target="_blank">
+                <img src="img/2.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+            <a href="https://t.me/hasan99bot" target="_blank">
+                <img src="img/3.jpg" alt="ابن البصرة | طلاب العراق">
+            </a>
+        </div>
 
-<!-- الأزرار الإضافية -->
-<a href="https://t.me/d_tt123bot?start=4e9a1ee436415e035dda990a0b039963" class="custom-button" target="_blank">ملازم اللغة العربية السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=eed6022419bf38db21fc4cc4ffe6cba2" class="custom-button" target="_blank">ملازم الإسلامية السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=c9713621d06f81fcf5552c5cbb4413a7" class="custom-button" target="_blank">ملازم الكيمياء السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=85c9b9d9bf6689cfbcc8d5e95b061544" class="custom-button" target="_blank">ملازم الانكليزي السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=8de19dc94385b06a8a6a7b79fe22abfd" class="custom-button" target="_blank">ملازم الرياضيات السادس إعدادي 2025</a>
-<a href="https://t.me/d_tt123bot?start=625d6e65e3e8c61c285421641ece03c0" class="custom-button" target="_blank">ملازم الأحياء السادس إعدادي 2025</a>
-</div>
+        <!-- الأزرار الإضافية -->
+        <a href="https://t.me/d_tt123bot?start=4e9a1ee436415e035dda990a0b039963" class="custom-button" target="_blank">ملازم اللغة العربية السادس إعدادي 2025</a>
+        <a href="https://t.me/d_tt123bot?start=eed6022419bf38db21fc4cc4ffe6cba2" class="custom-button" target="_blank">ملازم الإسلامية السادس إعدادي 2025</a>
+        <a href="https://t.me/d_tt123bot?start=c9713621d06f81fcf5552c5cbb4413a7" class="custom-button" target="_blank">ملازم الكيمياء السادس إعدادي 2025</a>
+        <a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء السادس إعدادي 2025</a>
+        <a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء السادس إعدادي 2025</a>
+        <a href="https://t.me/d_tt123bot?start=eea4b408a8a47f3a07fd07b24c2e43d1" class="custom-button" target="_blank">ملازم الرياضيات السادس إعدادي 2025</a>
+    </div>
 
+ 
 <!-- قسم الكتب -->
 <h2>ملازم السادس الإعدادي 2025</h2>
 <div class="books-container">
@@ -264,5 +306,19 @@
     <li><a href="https://t.me/d_tt111">كروب طلاب السادس الإعدادي</a></li>
     <li><a href="https://t.me/hasan99bot?start=5f00115e5b9ff7df9be670619bfada5b">شلون تجيب 100</a></li>
     </ul>
+</body>
+</html>
+
+    <!-- قسم البحث الثابت -->
+    <a href="#" class="search-button">ابحث الآن</a>
+
+    <script>
+        function performAISearch() {
+            const query = document.getElementById("ai-search-input").value;
+            if (query) {
+                window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+            }
+        }
+    </script>
 </body>
 </html>
