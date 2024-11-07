@@ -172,9 +172,8 @@ content="width=device-width, initial-scale=1.0">
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #ff4e4e, #ff8b73);
         }
-
         content="width=device-width, initial-scale=1.0">
-    <title>قائمة رئيسية مع زر البحث</title>
+    <title>بحث في جوجل</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -182,54 +181,34 @@ content="width=device-width, initial-scale=1.0">
             background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
-        .navbar {
-            background-color: #333;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        .navbar ul li {
-            margin: 0 15px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+        
         .search-container {
-            position: relative;
+            margin-top: 50px;
         }
+
         .search-input {
-            padding: 8px 10px;
+            padding: 10px;
             font-size: 16px;
-            border: 2px solid #ccc;
+            width: 60%;
             border-radius: 5px;
-            width: 200px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
         }
+
         .search-button {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
+            padding: 10px 20px;
             background-color: #007bff;
-            border: none;
-            padding: 8px 15px;
             color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            border-radius: 0 5px 5px 0;
         }
+
         .search-button:hover {
             background-color: #0056b3;
         }
-
 
 
         /* تنسيق قسم الكتب */
@@ -311,8 +290,11 @@ content="width=device-width, initial-scale=1.0">
 
             </ul>
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="ابحث هنا...">
-                <button class="https://www.coca.com/search?q=">بحث</button>
+                <h1>ابن البصرة | طلاب العراق </h1>
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <input type="text" name="q" class="search-input" placeholder="ابحث هنا..." required>
+                    <button type="submit" class="search-button">بحث</button>
+                </form>
             </div>
         </div>
     </body>
