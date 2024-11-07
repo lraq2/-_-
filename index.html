@@ -232,6 +232,76 @@ content="width=device-width, initial-scale=1.0">
         }
 
 
+
+
+
+
+        <title>قائمة بأزرار منسدلة</title>
+    <style>
+        /* تنسيق القائمة الرئيسية */
+        .menu-container {
+            position: relative;
+            display: inline-block;
+            float: right;
+            margin: 2px;
+        }
+
+        /* تنسيق زر القائمة */
+        .menu-button {
+            background-color: #333833;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* تنسيق القائمة المنسدلة */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* تنسيق الأزرار داخل القائمة */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eed9d9;
+        }
+
+        /* إظهار القائمة عند تمرير الماوس */
+        .menu-container:hover .dropdown-content {
+            display: block;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /* تنسيق قسم الكتب */
         .books-container {
             display: flex;
@@ -300,16 +370,27 @@ content="width=device-width, initial-scale=1.0">
                 padding: 10px;
             }
         }
+
+    
     </style>
 </head>
-
 <body>
-    <body>
-            <div class="search-container">
+
+    <div class="menu-container">
+        <a href="https://t.me/d_tt3" class="custom-button" target="_blank">السادس الاعدادي </a>
+        <div class="dropdown-content">
+            <a href="https://t.me/d_tt3">    طلاب العراق</a>
+            <a href="https://t.me/d_tt111">كروب طلاب سادس الاعدادي</a>
+            <a href="https://t.me/d_tt02">ملازم ومرشحات</a>
+            <a href="https://t.me/Hsu58bot">اعتراضات السادس الاعدادي</a>
+            <a href="https://t.me/hasan99bot?start=161a856b01931dfc38c8cc7fc2b36d49">الامتحانات الاكترونية </a>
+        </div>
+            
                 <h1>ابن البصرة | طلاب العراق  للبحث  في Google   </h1>
                 <form action="https://www.google.com/search" method="get" target="_blank">
                     <input type="text" name="q" class="search-input" placeholder="ابحث هنا..." required>
                     <button type="submit" class="search-button">بحث</button>
+                    
                 </form>
             </div>
         </div>
