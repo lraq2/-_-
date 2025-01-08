@@ -58,12 +58,9 @@ content="width=device-width, initial-scale=1.0">
             padding: 0;
             text-align: center;
         }
-        <style>
+    
 
 
-
-
- 
 
 
 
@@ -372,21 +369,85 @@ content="width=device-width, initial-scale=1.0">
         }
 
         /* وسائط CSS للأجهزة الصغيرة */
-        @media (max-width: 600px) {
-            .custom-button, .search-button {
-                font-size: 14px;
-                padding: 10px;
-            }
-            .book-item {
-                width: 140px;
-            }
-            ul {
-                flex-direction: column;
-            }
-            li {
-                padding: 10px;
-            }
-        }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button, .custom-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* تحسين عرض الصور */
+    .section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* تحسين تنسيق الكتب */
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* تنسيق القائمة */
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .menu-button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
+/* وسائط CSS للأجهزة الصغيرة جداً */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .button, .custom-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .section img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .books-container {
+        flex-direction: column;
+    }
+
+    .book-item {
+        width: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+}
 
     
 
@@ -573,7 +634,5 @@ content="width=device-width, initial-scale=1.0">
     </script>
 </body>
 </html>
-
-
 
 
