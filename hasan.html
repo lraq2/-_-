@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابن البصرة | طلاب العراق | السادس الإعدادي</title>
+    <style>
+
+content="width=device-width, initial-scale=1.0">
+    <title>القائمة المتحركة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        .menu-button:hover {
+            background-color: #000000;
+        }
+        .submenu {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .submenu li {
+            margin: 10px 0;
+        }
+        .submenu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            background-color: #e7e7e7;
+            border-radius: 5px;
+        }
+        .submenu a:hover {
+            background-color: #ccc;
+        }
+        /* إعدادات الخطوط والألوان */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    
+
+
+
+        button {
+    font-size: 10px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    width: auto; /* تكبير العرض تلقائيًا */
+    height: auto; /* تكبير الطول تلقائيًا */
+}
+
+
+    /* تنسيق الزر */
+    .btn {
+      display: block;
+      width: 100%;  /* عرض الزر على كامل الصفحة */
+      padding: 15px;
+      font-size: 18px;
+      color: white;
+      background-color: #4CAF50; /* اللون الأخضر */
+      border: none;
+      border-radius: 8px; /* حواف دائرية */
+      text-align: center;
+      text-decoration: none; /* إزالة التسطير */
+      box-sizing: border-box;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    /* التأثير عند المرور على الزر */
+    .btn:hover {
+      background-color: #45a049; /* تغيير اللون عند المرور */
+      transform: scale(1.05); /* تكبير الزر قليلاً */
+    }
+       
+        /* تنسيق القائمة الرئيسية */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+        li {
+            padding: 5px 7px;
+        }
+        li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        li a:hover {
+            background-color: #007b7f;
+            border-radius: 10px;
+        }
+
+        /* تنسيق العناوين */
+        h1 {
+            font-size: 2em; 
+            color: #42464d;
+            margin: 10px 0;
+        }
+
+        /* تنسيق الصور */
+        .section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .section img:hover {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق قسم المعلومات */
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        /* تنسيق الأزرار */
+        .custom-button {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 8px auto;
+            padding: 12px;
+            background: linear-gradient(45deg, #8b7272, #44160a);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff4e4e, #ff8b73);
+        }
+        
+ 
+   
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .search-container {
+            margin-top: 50px;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #000000;
+        }
+
+
+
+   
+        /* تنسيق الحاوية */
+        .button-container {
+            display: flex;
+            justify-content: center; /* لتوسيط الأزرار */
+            gap: 20px; /* مسافة بين الأزرار */
+            margin-top: 30px;
+        }
+
+        /* تنسيق الأزرار */
+        .button {
+            padding: 12px 20px; /* توسيع الأزرار */
+            font-size: 19px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #af7373; /* لون رصاصي */
+            border: none;
+            border-radius: 8px; /* زوايا دائرية */
+            text-decoration: none; /* إزالة التسطير من الرابط */
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+        }
+
+        /* تأثير التمرير */
+        .button:hover {
+            background-color: #d4af37; /* لون ذهبي عند التمرير */
+        }
+
+        /* تأثير عند الضغط */
+        .button:active {
+            transform: translateY(3px); /* تحريك الزر للأسفل */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل الظل */
+        }
+
+
+    
+        /* تنسيق القائمة الرئيسية */
+        .menu-container {
+            position: relative;
+            display: inline-block;
+            float: right;
+            margin: 2px;
+        }
+
+        /* تنسيق زر القائمة */
+        .menu-button {
+            background-color: #333833;
+            color: white;
+            padding: 12px 20px;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* تنسيق القائمة المنسدلة */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* تنسيق الأزرار داخل القائمة */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eed9d9;
+        }
+
+    
+
+        /* تنسيق قسم الكتب */
+        .books-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+
+        .book-item {
+            width: 100px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .book-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-item img {
+            max-height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .borrow-button {
+            margin-top: 8px;
+            padding: 8px 15px;
+            background-color: #007b7f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .borrow-button:hover {
+            background-color: #006f6f;
+        }
+
+        /* وسائط CSS للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button, .custom-button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* تحسين عرض الصور */
+    .section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* تحسين تنسيق الكتب */
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-item {
+        width: 50%;
+        max-width: 200x;
+    }
+
+    /* تنسيق القائمة */
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .menu-button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+    
+}
+    /* تنسيق القائمة */
+    .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .menu-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* تنسيق الأزرار */
+        .menu-button {
+            text-decoration: none;
+            background-color: #777777; /* اللون الذهبي */
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-button:hover {
+            background-color: #b68c2b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* الأزرار بالصف الثاني */
+        .menu-button:nth-child(4n+1) {
+            flex-basis: 100%; /* زر مستقل لكل صف */
+            text-align: center;
+        }
+        .menu-button {
+    margin: 5px; /* تقليل المسافة حول كل زر */
+}
+
+
+/* تنسيق الجسم */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* القائمة الرئيسية */
+.main-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-toggle {
+    font-size: 18px;
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar .close-btn {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.menu-options {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-options li {
+    margin: 15px 0;
+}
+
+.menu-options a {
+    text-decoration: none;
+    color: #d4af37;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu-options a:hover {
+    color: #fff;
+}
+
+/* الأزرار الصغيرة */
+.small-buttons {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+</style>
+</head>
+    <div class="menu-container">
+        <h2 class="menu-title">ابن البصرة | طلاب العراق  </h2>
+        <p> مرحباً بكم  
+            وجهتكم الأولى للنجاح  نسعى لتقديم محتوى تعليمي شامل ومفيد يساعدك على التفوق في دراستك وتطوير مهاراتك
+             ماذا نقدم؟
+
+             ملخصات و شروحات واضحة وسهلة للمناهج.
+            اختبارات تجريبية لتحسين مستواك.
+            نصائح دراسية تساعدك على تنظيم وقتك.
+             أحدث  وأفضل المصادر للطلاب.
+            <br></br> 
+            انضم إلينا الآن وتفوّق في دراستك      
+            
+           </p>
+           
+        <div class="menu-buttons">
+            <a href="https://t.me/d_tt3" class="menu-button">قناة ابن البصرة </a>
+          
+<!-- قسم الكتب -->
+<h2>ملازم السادس الإعدادي 2025</h2>
+تستعد العديد من الطلاب في العراق لمواجهة تحديات الصف السادس العلمي، والتي تتطلب إعدادًا جيدًا ومصادر موثوقة. ولمساعدتكم في هذا الصدد، نقدم لكم صفحة تحميل ملازم الصف السادس العلمي للعام الدراسي 2025. تتوفر في هذه الصفحة ملازم لجميع المواد المقررة، بما في ذلك الاسلامية، القواعد، الأدب، الرياضيات، الفيزياء، الكيمياء، الأحياء، اللغة الإنجليزية، اللغة العربية، واللغة الفرنسية.
+ <!-- الأزرار الإضافية -->
+ <a href="https://t.me/d_tt123bot?start=4e9a1ee436415e035dda990a0b039963" class="custom-button" target="_blank">ملازم اللغة العربية  2025</a>
+ <a href="https://t.me/d_tt123bot?start=eed6022419bf38db21fc4cc4ffe6cba2" class="custom-button" target="_blank">ملازم الإسلامية   2025</a>
+ <a href="https://t.me/d_tt123bot?start=c9713621d06f81fcf5552c5cbb4413a7" class="custom-button" target="_blank">ملازم الكيمياء   2025</a>
+ <a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء   2025</a>
+ <a href="https://t.me/d_tt123bot?start=11dbcc75f900e4ab5079be0a5e95fb7a" class="custom-button" target="_blank">ملازم الفيزياء   2025</a>
+ <a href="https://t.me/d_tt123bot?start=eea4b408a8a47f3a07fd07b24c2e43d1" class="custom-button" target="_blank">ملازم الرياضيات   2025</a>
+</div>
+    <div class="books-container">
+        <!-- كتاب 1 -->
+        <div class="book-item">
+            <img src="img/4.jpg" alt="حيدر وليد - رياضيات">
+            <h3>حيدر وليد  </h3>
+            <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/9'">تحميل </button>
+        </div>
+        <!-- كتاب 2 -->
+        <div class="book-item">
+            <img src="img/5.jpg" alt="علاء السعداوي - كيمياء">
+            <h3>علاء السعداوي  </h3>
+            <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/28'">تحميل </button>
+        </div>
+        <!-- كتاب 3 -->
+        <div class="book-item">
+            <img src="img/6.jpg" alt="مؤيد سليم - فيزياء">
+            <h3>مؤيد سليم </h3>
+            <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/23'">تحميل </button>
+        </div>
+     <!-- كتاب 4 -->
+     <div class="book-item">
+        <img src="img/8.jpg" alt=" نورس الموسوي ">
+        <h3> نورس الموسوي  </h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/22'">تحميل </button>
+    </div>
+    <!-- كتاب 5 -->
+    <div class="book-item">
+        <img src="img/9.jpg" alt=" عقيل الزبيدي ">
+        <h3> عقيل الزبيدي </h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/18'">تحميل </button>
+    </div>
+    <!-- كتاب 6 -->
+    <div class="book-item">
+        <img src="img/10.jpg" alt="عمار فاضل">
+        <h3> عمار فاضل</h3>
+        <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/12'">تحميل </button>
+    </div>
+     <!-- الرابط مع الزر -->
+ <a href="https://t.me/d_tt123bot" class="custom-button" target="_blank">     المزيد من الملازم 2025 </a>
+ <!-- زر البحث الثابت -->
+ <a href="https://t.me/d_tt123bot?start=search" class="custom-button" target="_blank">    البحث داخل البوت</a>
+ </div></br>
+ 
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+        <div class="social-icons">
+            <a href="https://t.me/d_tt9">ＡｔＨｉＮ a</a>
+           
+        </div>
+    </footer>
+
+</body>
+</html>
